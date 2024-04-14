@@ -7,6 +7,7 @@ function MessageHandlerComponent() {
       if (event) {
         const messageReceived = event.data
         console.log(messageReceived)
+        alert(messageReceived);
         // Add additional code to manipulate the received message here
       }
     }
