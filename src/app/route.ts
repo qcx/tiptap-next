@@ -2,7 +2,6 @@ import { customAlphabet } from 'nanoid'
 
 export const dynamic = 'auto'
 export const dynamicParams = true
-export const runtime = 'edge';
 
 const getNanoId = (): string => {
   const nanoid = customAlphabet('6789BCDFGHJKLMNPQRTWbcdfghjkmnpqrtwz', 10)
