@@ -1,19 +1,8 @@
-import { customAlphabet } from 'nanoid'
-
-export const dynamic = 'auto'
-export const dynamicParams = true
-
-const getNanoId = (): string => {
-  const nanoid = customAlphabet('6789BCDFGHJKLMNPQRTWbcdfghjkmnpqrtwz', 10)
-  return nanoid()
-}
-
 export async function GET(): Promise<Response> {
-  return new Response(null, {
-    status: 307, // Use 308 for a permanent redirect, 307 for a temporary redirect
+  return new Response(JSON.stringify({ status: 'up' }), {
+    status: 200,
     headers: {
-      Location: `/${getNanoId()}`,
-      'Cache-Control': 'no-store, max-age=0',
+      'Content-Type': 'application/json',
     },
   })
 }
