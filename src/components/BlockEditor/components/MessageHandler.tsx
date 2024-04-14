@@ -1,14 +1,17 @@
 import { useEffect } from 'react'
 
-function MessageHandlerComponent() {
+export const MessageHandler = ({ editor }) => {
   // Define the message handler function inside the useEffect to capture the latest state
   useEffect(() => {
     const messageHandler = event => {
       if (event) {
         const messageReceived = event.data
+
+        if (messageReceived === 'askContent') {
+          window.parent.postMessage(editor.getJSON(), '*')
+          alert('Bye')
+        }
         console.log(messageReceived)
-        alert(messageReceived);
-        // Add additional code to manipulate the received message here
       }
     }
 
@@ -21,7 +24,5 @@ function MessageHandlerComponent() {
     }
   }, []) // Empty dependency array means this effect runs once on mount and cleanup on unmount
 
-  return <div>Listening for messages...</div>
+  return <div></div>
 }
-
-export default MessageHandlerComponent
