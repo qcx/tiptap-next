@@ -1,7 +1,5 @@
 'use client'
 
-import { HocuspocusProvider } from '@hocuspocus/provider'
-
 import { API } from '@/lib/api'
 
 import {
@@ -48,14 +46,7 @@ import { ImageUpload } from './ImageUpload'
 import { TableOfContentsNode } from './TableOfContentsNode'
 import { lowlight } from 'lowlight'
 
-interface ExtensionKitProps {
-  provider?: HocuspocusProvider | null
-  userId?: string
-  userName?: string
-  userColor?: string
-}
-
-export const ExtensionKit = ({ provider, userId, userName = 'Maxi' }: ExtensionKitProps) => [
+export const ExtensionKit = () => [
   Document,
   Columns,
   TaskList,
@@ -94,9 +85,7 @@ export const ExtensionKit = ({ provider, userId, userName = 'Maxi' }: ExtensionK
   CharacterCount.configure({ limit: 50000 }),
   TableOfContents,
   TableOfContentsNode,
-  ImageUpload.configure({
-    clientId: provider?.document?.clientID,
-  }),
+  ImageUpload.configure(),
   ImageBlock,
   FileHandler.configure({
     allowedMimeTypes: ['image/png', 'image/jpeg', 'image/gif', 'image/webp'],

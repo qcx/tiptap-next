@@ -9,14 +9,10 @@ export type EditorHeaderProps = {
   toggleSidebar?: () => void
   characters: number
   words: number
-  collabState: WebSocketStatus
-  users: EditorUser[]
 }
 
 export const EditorHeader = ({
   characters,
-  collabState,
-  users,
   words,
   isSidebarOpen,
   toggleSidebar,
@@ -35,7 +31,7 @@ export const EditorHeader = ({
           </Toolbar.Button>
         </div>
       </div>
-      <EditorInfo characters={characters} words={words} collabState={collabState} users={users} />
+      <EditorInfo characters={characters} words={words} />
     </div>
   )
 }

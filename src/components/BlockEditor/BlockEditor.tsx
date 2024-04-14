@@ -20,13 +20,11 @@ import { TextMenu } from '../menus/TextMenu'
 import { ContentItemMenu } from '../menus/ContentItemMenu'
 import { MessageHandler } from './components/MessageHandler'
 
-export const BlockEditor = ({ ydoc, provider }: TiptapProps) => {
+export const BlockEditor = () => {
   const menuContainerRef = useRef(null)
   const editorRef = useRef<PureEditorContent | null>(null)
 
-  const { editor, users, characterCount, collabState, leftSidebar } = useBlockEditor({ ydoc, provider })
-
-  const displayedUsers = users.slice(0, 3)
+  const { editor, characterCount, leftSidebar } = useBlockEditor()
 
   const providerValue = useMemo(() => {
     return {}
@@ -43,8 +41,6 @@ export const BlockEditor = ({ ydoc, provider }: TiptapProps) => {
         <div className="relative flex flex-col flex-1 h-full overflow-hidden">
           <EditorHeader
             characters={characterCount.characters()}
-            collabState={collabState}
-            users={displayedUsers}
             words={characterCount.words()}
             isSidebarOpen={leftSidebar.isOpen}
             toggleSidebar={leftSidebar.toggle}
