@@ -22,7 +22,7 @@ export const MessageHandler = ({ editor }) => {
     return () => {
       window.removeEventListener('message', messageHandler)
     }
-  }, []) // Empty dependency array means this effect runs once on mount and cleanup on unmount
+  }) // Empty dependency array means this effect runs once on mount and cleanup on unmount
 
   return <div></div>
 }

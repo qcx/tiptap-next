@@ -10,7 +10,7 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write --ignore-path .gitignore \"./**/*.{js,jsx,ts,tsx,json,css}\"",
     "pages:build": "npx @cloudflare/next-on-pages",
-    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.15",

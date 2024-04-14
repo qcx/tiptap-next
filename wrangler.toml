@@ -2,6 +2,7 @@
 name = "tiptap-next"
 compatibility_date = "2024-04-05"
 compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
