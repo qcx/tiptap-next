@@ -18,6 +18,7 @@ import { TiptapProps } from './types'
 import { EditorHeader } from './components/EditorHeader'
 import { TextMenu } from '../menus/TextMenu'
 import { ContentItemMenu } from '../menus/ContentItemMenu'
+import MessageHandlerComponent from '../appsmith'
 
 export const BlockEditor = ({ ydoc, provider }: TiptapProps) => {
   const menuContainerRef = useRef(null)
@@ -58,6 +59,7 @@ export const BlockEditor = ({ ydoc, provider }: TiptapProps) => {
           <ImageBlockMenu editor={editor} appendTo={menuContainerRef} />
         </div>
       </div>
+      <MessageHandlerComponent />
     </EditorContext.Provider>
   )
 }
