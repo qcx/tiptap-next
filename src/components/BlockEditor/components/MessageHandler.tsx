@@ -1,17 +1,24 @@
 import { useEffect } from 'react'
+import type { Editor } from '@tiptap/react'
 
-export const MessageHandler = ({ editor }) => {
+export const MessageHandler = ({ editor }: { editor: Editor }) => {
   // Define the message handler function inside the useEffect to capture the latest state
   useEffect(() => {
     const messageHandler = event => {
       if (event) {
         const messageReceived = event.data
 
-        if (messageReceived === 'askContent') {
+        const { action, data } = messageReceived
+
+        if (action === 'askContent') {
           window.parent.postMessage(editor.getJSON(), '*')
+          console.log(editor.getJSON())
           alert('Bye')
         }
-        console.log(messageReceived)
+
+        if (action === 'setValue') {
+          editor.commands.setContent(data)
+        }
       }
     }
 

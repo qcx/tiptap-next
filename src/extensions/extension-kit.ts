@@ -26,7 +26,6 @@ import {
   Subscript,
   Superscript,
   Table,
-  TableOfContents,
   TableCell,
   TableHeader,
   TableRow,
@@ -38,21 +37,16 @@ import {
   emojiSuggestion,
   Columns,
   Column,
-  TaskItem,
-  TaskList,
+  QuestionBlock,
 } from '.'
 import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight'
 import { ImageUpload } from './ImageUpload'
-import { TableOfContentsNode } from './TableOfContentsNode'
 import { lowlight } from 'lowlight'
 
 export const ExtensionKit = () => [
   Document,
   Columns,
-  TaskList,
-  TaskItem.configure({
-    nested: true,
-  }),
+  QuestionBlock,
   Column,
   Selection,
   Heading.configure({
@@ -83,8 +77,6 @@ export const ExtensionKit = () => [
   Highlight.configure({ multicolor: true }),
   Underline,
   CharacterCount.configure({ limit: 50000 }),
-  TableOfContents,
-  TableOfContentsNode,
   ImageUpload.configure(),
   ImageBlock,
   FileHandler.configure({

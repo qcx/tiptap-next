@@ -1,8 +1,7 @@
 import { Editor, useEditor } from '@tiptap/react'
 
 import { ExtensionKit } from '@/extensions/extension-kit'
-import { useSidebar } from './useSidebar'
-import { initialContent } from '@/lib/data/initialContent'
+import { useEffect } from 'react'
 
 declare global {
   interface Window {
@@ -11,14 +10,15 @@ declare global {
 }
 
 export const useBlockEditor = () => {
-  const leftSidebar = useSidebar()
-
   const editor = useEditor(
     {
       autofocus: true,
       onCreate: ({ editor }) => {
         if (editor.isEmpty) {
-          editor.commands.setContent(initialContent)
+          // editor.commands.setContent(initialContent)
+          editor.commands.setContent(`<react-component>
+          <p>This is editable. You can create a new component by pressing Mod+Enter.</p>
+        </react-component>`)
         }
       },
       extensions: [...ExtensionKit()],
@@ -36,7 +36,9 @@ export const useBlockEditor = () => {
 
   const characterCount = editor?.storage.characterCount || { characters: () => 0, words: () => 0 }
 
-  window.editor = editor
+  useEffect(() => {
+    window.editor = editor
+  }, [editor])
 
-  return { editor, characterCount, leftSidebar }
+  return { editor, characterCount }
 }

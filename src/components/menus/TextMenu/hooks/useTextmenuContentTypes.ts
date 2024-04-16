@@ -73,15 +73,6 @@ export const useTextmenuContentTypes = (editor: Editor) => {
         label: 'Numbered list',
         type: 'option',
       },
-      {
-        icon: 'ListTodo',
-        onClick: () => editor.chain().focus().toggleTaskList().run(),
-        id: 'todoList',
-        disabled: () => !editor.can().toggleTaskList(),
-        isActive: () => editor.isActive('taskList'),
-        label: 'Todo list',
-        type: 'option',
-      },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editor, editor.state])

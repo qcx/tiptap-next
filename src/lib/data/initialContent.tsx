@@ -414,7 +414,9 @@ export const initialContent = {
               content: [
                 {
                   type: 'text',
-                  text: '@tiptap-pro/extension-drag-handle-react',
+                  text: `    <react-component>
+                  <p>This is editable. You can create a new component by pressing Mod+Enter.</p>
+                </react-component>`,
                 },
               ],
             },

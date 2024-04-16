@@ -9,26 +9,9 @@ const FONT_FAMILY_GROUPS = [
   {
     label: 'Sans Serif',
     options: [
-      { label: 'Inter', value: '' },
       { label: 'Arial', value: 'Arial' },
-      { label: 'Helvetica', value: 'Helvetica' },
     ],
-  },
-  {
-    label: 'Serif',
-    options: [
-      { label: 'Times New Roman', value: 'Times' },
-      { label: 'Garamond', value: 'Garamond' },
-      { label: 'Georgia', value: 'Georgia' },
-    ],
-  },
-  {
-    label: 'Monospace',
-    options: [
-      { label: 'Courier', value: 'Courier' },
-      { label: 'Courier New', value: 'Courier New' },
-    ],
-  },
+  }
 ]
 
 const FONT_FAMILIES = FONT_FAMILY_GROUPS.flatMap(group => [group.options]).flat()
@@ -40,7 +23,7 @@ export type FontFamilyPickerProps = {
 
 export const FontFamilyPicker = ({ onChange, value }: FontFamilyPickerProps) => {
   const currentValue = FONT_FAMILIES.find(size => size.value === value)
-  const currentFontLabel = currentValue?.label.split(' ')[0] || 'Inter'
+  const currentFontLabel = currentValue?.label.split(' ')[0] || 'Arial'
 
   const selectFont = useCallback((font: string) => () => onChange(font), [onChange])
 

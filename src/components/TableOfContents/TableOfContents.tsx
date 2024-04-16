@@ -31,9 +31,7 @@ export const TableOfContents = memo(({ editor, onItemClick }: TableOfContentsPro
 
   return (
     <>
-      <div className="mb-2 text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400">
-        Table of contents
-      </div>
+      <div className="mb-2 text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400">Índice</div>
       {data && data.content.length > 0 ? (
         <div className="flex flex-col gap-1">
           {data.content.map(item => (
@@ -52,7 +50,9 @@ export const TableOfContents = memo(({ editor, onItemClick }: TableOfContentsPro
           ))}
         </div>
       ) : (
-        <div className="text-sm text-neutral-500">Start adding headlines to your document …</div>
+        <div className="text-sm text-neutral-500">
+          Adícione títulos e subtíulos ao seu documento para montar o índice
+        </div>
       )}
     </>
   )

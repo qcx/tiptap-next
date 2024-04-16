@@ -1,0 +1,45 @@
+.react-component-with-content {
+  border: 1px solid #0d0d0d;
+  min-height: 350px;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  .label {
+    margin-left: 1rem;
+    background-color: #0d0d0d;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  .content {
+    margin: 2.5rem 1rem 1rem;
+    padding: 0.5rem;
+    border: 2px dashed #0d0d0d20;
+    border-radius: 0.5rem;
+  }
+}
+
+.react-component-with-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-image: url('/question.png'); 
+  filter: blur(1.5px);
+  z-index: -1; 
+}

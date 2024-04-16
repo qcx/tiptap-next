@@ -56,16 +56,6 @@ export const GROUPS: Group[] = [
         },
       },
       {
-        name: 'taskList',
-        label: 'Task List',
-        iconName: 'ListTodo',
-        description: 'Task list with todo items',
-        aliases: ['todo'],
-        action: editor => {
-          editor.chain().focus().toggleTaskList().run()
-        },
-      },
-      {
         name: 'blockquote',
         label: 'Blockquote',
         iconName: 'Quote',
@@ -137,14 +127,12 @@ export const GROUPS: Group[] = [
         },
       },
       {
-        name: 'toc',
-        label: 'Table of Contents',
+        name: 'question',
+        label: 'Question',
         iconName: 'Book',
-        aliases: ['outline'],
-        description: 'Insert a table of contents',
-        shouldBeHidden: editor => editor.isActive('columns'),
+        description: 'Insert a question block',
         action: editor => {
-          editor.chain().focus().insertTableOfContents().run()
+          editor.chain().focus().insertQuestionBlock().run()
         },
       },
     ],
