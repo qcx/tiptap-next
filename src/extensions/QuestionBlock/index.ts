@@ -58,12 +58,7 @@ export const QuestionBlock = Node.create({
               attrs: {
                 questionId: '1242',
               },
-              content: [
-                {
-                  type: 'text',
-                  text: 'Question Component Placeholder Text',
-                },
-              ],
+              content: [],
             },
           ])
         },

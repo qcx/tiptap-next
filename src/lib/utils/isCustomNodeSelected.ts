@@ -27,7 +27,7 @@ export const isCustomNodeSelected = (editor: Editor, node: HTMLElement) => {
     CodeBlock.name,
     ImageBlock.name,
     Link.name,
-    Figcaption.name
+    Figcaption.name,
   ]
 
   return customNodes.some(type => editor.isActive(type)) || isTableGripSelected(node)

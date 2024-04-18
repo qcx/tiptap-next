@@ -8,10 +8,8 @@ import { useCallback } from 'react'
 const FONT_FAMILY_GROUPS = [
   {
     label: 'Sans Serif',
-    options: [
-      { label: 'Arial', value: 'Arial' },
-    ],
-  }
+    options: [{ label: 'Arial', value: 'Arial' }],
+  },
 ]
 
 const FONT_FAMILIES = FONT_FAMILY_GROUPS.flatMap(group => [group.options]).flat()

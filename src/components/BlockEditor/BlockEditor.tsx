@@ -36,10 +36,7 @@ export const BlockEditor = () => {
     <EditorContext.Provider value={providerValue}>
       <div className="flex h-full" ref={menuContainerRef}>
         <div className="relative flex flex-col flex-1 h-full overflow-hidden">
-          <EditorHeader
-            characters={characterCount.characters()}
-            words={characterCount.words()}
-          />
+          <EditorHeader characters={characterCount.characters()} words={characterCount.words()} />
           <EditorContent editor={editor} ref={editorRef} className="flex-1 overflow-y-auto" />
           <ContentItemMenu editor={editor} />
           <LinkMenu editor={editor} appendTo={menuContainerRef} />
