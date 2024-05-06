@@ -1,9 +1,9 @@
-import { memo } from 'react'
+import { memo } from 'react';
 
 export type EditorInfoProps = {
-  characters: number
-  words: number
-}
+  characters: number;
+  words: number;
+};
 
 export const EditorInfo = memo(({ characters, words }: EditorInfoProps) => {
   return (
@@ -17,7 +17,7 @@ export const EditorInfo = memo(({ characters, words }: EditorInfoProps) => {
         </div>
       </div>
     </div>
-  )
-})
+  );
+});
 
-EditorInfo.displayName = 'EditorInfo'
+EditorInfo.displayName = 'EditorInfo';

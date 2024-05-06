@@ -1,32 +1,32 @@
-import { Spinner } from '@/components/ui/Spinner'
-import { useDropZone, useFileUpload, useUploader } from './hooks'
-import { Button } from '@/components/ui/Button'
-import { Icon } from '@/components/ui/Icon'
-import { cn } from '@/lib/utils'
-import { ChangeEvent, useCallback } from 'react'
+import { Spinner } from '@/components/ui/Spinner';
+import { useDropZone, useFileUpload, useUploader } from './hooks';
+import { Button } from '@/components/ui/Button';
+import { Icon } from '@/components/ui/Icon';
+import { cn } from '@/lib/utils';
+import { ChangeEvent, useCallback } from 'react';
 
 export const ImageUploader = ({ onUpload }: { onUpload: (url: string) => void }) => {
-  const { loading, uploadFile } = useUploader({ onUpload })
-  const { handleUploadClick, ref } = useFileUpload()
-  const { draggedInside, onDrop, onDragEnter, onDragLeave } = useDropZone({ uploader: uploadFile })
+  const { loading, uploadFile } = useUploader({ onUpload });
+  const { handleUploadClick, ref } = useFileUpload();
+  const { draggedInside, onDrop, onDragEnter, onDragLeave } = useDropZone({ uploader: uploadFile });
 
   const onFileChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => (e.target.files ? uploadFile(e.target.files[0]) : null),
     [uploadFile],
-  )
+  );
 
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8 rounded-lg min-h-[10rem] bg-opacity-80">
         <Spinner className="text-neutral-500" size={1.5} />
       </div>
-    )
+    );
   }
 
   const wrapperClass = cn(
     'flex flex-col items-center justify-center px-8 py-10 rounded-lg bg-opacity-80',
     draggedInside && 'bg-neutral-100',
-  )
+  );
 
   return (
     <div
@@ -56,7 +56,7 @@ export const ImageUploader = ({ onUpload }: { onUpload: (url: string) => void })
         onChange={onFileChange}
       />
     </div>
-  )
-}
+  );
+};
 
-export default ImageUploader
+export default ImageUploader;

@@ -1,4 +1,4 @@
-import { Group } from './types'
+import { Group } from './types';
 
 export const GROUPS: Group[] = [
   {
@@ -12,7 +12,7 @@ export const GROUPS: Group[] = [
         description: 'High priority section title',
         aliases: ['h1'],
         action: editor => {
-          editor.chain().focus().setHeading({ level: 1 }).run()
+          editor.chain().focus().setHeading({ level: 1 }).run();
         },
       },
       {
@@ -22,7 +22,7 @@ export const GROUPS: Group[] = [
         description: 'Medium priority section title',
         aliases: ['h2'],
         action: editor => {
-          editor.chain().focus().setHeading({ level: 2 }).run()
+          editor.chain().focus().setHeading({ level: 2 }).run();
         },
       },
       {
@@ -32,7 +32,7 @@ export const GROUPS: Group[] = [
         description: 'Low priority section title',
         aliases: ['h3'],
         action: editor => {
-          editor.chain().focus().setHeading({ level: 3 }).run()
+          editor.chain().focus().setHeading({ level: 3 }).run();
         },
       },
       {
@@ -42,7 +42,7 @@ export const GROUPS: Group[] = [
         description: 'Unordered list of items',
         aliases: ['ul'],
         action: editor => {
-          editor.chain().focus().toggleBulletList().run()
+          editor.chain().focus().toggleBulletList().run();
         },
       },
       {
@@ -52,7 +52,7 @@ export const GROUPS: Group[] = [
         description: 'Ordered list of items',
         aliases: ['ol'],
         action: editor => {
-          editor.chain().focus().toggleOrderedList().run()
+          editor.chain().focus().toggleOrderedList().run();
         },
       },
       {
@@ -61,7 +61,7 @@ export const GROUPS: Group[] = [
         iconName: 'Quote',
         description: 'Element for quoting',
         action: editor => {
-          editor.chain().focus().setBlockquote().run()
+          editor.chain().focus().setBlockquote().run();
         },
       },
       {
@@ -71,7 +71,7 @@ export const GROUPS: Group[] = [
         description: 'Code block with syntax highlighting',
         shouldBeHidden: editor => editor.isActive('columns'),
         action: editor => {
-          editor.chain().focus().setCodeBlock().run()
+          editor.chain().focus().setCodeBlock().run();
         },
       },
     ],
@@ -87,7 +87,7 @@ export const GROUPS: Group[] = [
         description: 'Insert a table',
         shouldBeHidden: editor => editor.isActive('columns'),
         action: editor => {
-          editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: false }).run()
+          editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: false }).run();
         },
       },
       {
@@ -97,7 +97,7 @@ export const GROUPS: Group[] = [
         description: 'Insert an image',
         aliases: ['img'],
         action: editor => {
-          editor.chain().focus().setImageUpload().run()
+          editor.chain().focus().setImageUpload().run();
         },
       },
       {
@@ -113,7 +113,7 @@ export const GROUPS: Group[] = [
             .focus()
             .setColumns()
             .focus(editor.state.selection.head - 1)
-            .run()
+            .run();
         },
       },
       {
@@ -123,7 +123,7 @@ export const GROUPS: Group[] = [
         description: 'Insert a horizontal divider',
         aliases: ['hr'],
         action: editor => {
-          editor.chain().focus().setHorizontalRule().run()
+          editor.chain().focus().setHorizontalRule().run();
         },
       },
       {
@@ -132,7 +132,7 @@ export const GROUPS: Group[] = [
         iconName: 'Book',
         description: 'Insert a question block',
         action: editor => {
-          editor.chain().focus().insertQuestionBlock().run()
+          editor.chain().focus().insertQuestionBlock().run();
         },
       },
       {
@@ -141,7 +141,7 @@ export const GROUPS: Group[] = [
         iconName: 'Book',
         description: 'Insert a video block',
         action: editor => {
-          editor.chain().focus().insertVideoLessonBlock().run()
+          editor.chain().focus().insertVideoLessonBlock().run();
         },
       },
     ],
@@ -156,7 +156,7 @@ export const GROUPS: Group[] = [
         iconName: 'Book',
         description: 'Insert a question block',
         action: editor => {
-          editor.chain().focus().insertQuestionBlock().run()
+          editor.chain().focus().insertQuestionBlock().run();
         },
       },
       {
@@ -165,11 +165,11 @@ export const GROUPS: Group[] = [
         iconName: 'Book',
         description: 'Insert a video block',
         action: editor => {
-          editor.chain().focus().insertVideoLessonBlock().run()
+          editor.chain().focus().insertVideoLessonBlock().run();
         },
       },
     ],
   },
-]
+];
 
-export default GROUPS
+export default GROUPS;
