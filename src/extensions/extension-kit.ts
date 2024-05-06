@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { API } from '@/lib/api'
+import { API } from '@/lib/api';
 
 import {
   BlockquoteFigure,
@@ -39,10 +39,10 @@ import {
   Column,
   QuestionBlock,
   VideoLessonBlock,
-} from '.'
-import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight'
-import { ImageUpload } from './ImageUpload'
-import { lowlight } from 'lowlight'
+} from '.';
+import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight';
+import { ImageUpload } from './ImageUpload';
+import { lowlight } from 'lowlight';
 
 export const ExtensionKit = () => [
   Document,
@@ -85,21 +85,21 @@ export const ExtensionKit = () => [
     allowedMimeTypes: ['image/png', 'image/jpeg', 'image/gif', 'image/webp'],
     onDrop: (currentEditor, files, pos) => {
       files.forEach(async () => {
-        const url = await API.uploadImage()
+        const url = await API.uploadImage();
 
-        currentEditor.chain().setImageBlockAt({ pos, src: url }).focus().run()
-      })
+        currentEditor.chain().setImageBlockAt({ pos, src: url }).focus().run();
+      });
     },
     onPaste: (currentEditor, files) => {
       files.forEach(async () => {
-        const url = await API.uploadImage()
+        const url = await API.uploadImage();
 
         return currentEditor
           .chain()
           .setImageBlockAt({ pos: currentEditor.state.selection.anchor, src: url })
           .focus()
-          .run()
-      })
+          .run();
+      });
     },
   }),
   Emoji.configure({
@@ -108,7 +108,7 @@ export const ExtensionKit = () => [
   }),
   TextAlign.extend({
     addKeyboardShortcuts() {
-      return {}
+      return {};
     },
   }).configure({
     types: ['heading', 'paragraph'],
@@ -133,6 +133,6 @@ export const ExtensionKit = () => [
     width: 2,
     class: 'ProseMirror-dropcursor border-black',
   }),
-]
+];
 
-export default ExtensionKit
+export default ExtensionKit;
