@@ -70,6 +70,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "^14.1.0",
     "iframe-resizer": "^4.3.9",
+    "katex": "^0.16.10",
     "lowlight": "^2.9.0",
     "lucide-react": "^0.266.0",
     "nanoid": "^4.0.2",

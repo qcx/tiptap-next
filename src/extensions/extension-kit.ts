@@ -39,8 +39,10 @@ import {
   Column,
   QuestionBlock,
   VideoLessonBlock,
+  Mathematics,
 } from '.';
 import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight';
+
 import { ImageUpload } from './ImageUpload';
 import { lowlight } from 'lowlight';
 
@@ -133,6 +135,7 @@ export const ExtensionKit = () => [
     width: 2,
     class: 'ProseMirror-dropcursor border-black',
   }),
+  Mathematics,
 ];
 
 export default ExtensionKit;

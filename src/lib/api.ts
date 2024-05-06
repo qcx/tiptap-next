@@ -4,7 +4,7 @@ export class API {
 
     const responseURL = await requestURL.json();
 
-    const url = b.result.result.uploadURL;
+    const url = responseURL.result.result.uploadURL;
 
     const myHeaders = new Headers();
     myHeaders.append('Authorization', 'Bearer Far4n-ZDIKz2XADoC6-Drzp3qAm_3dgl_EedzGI4');

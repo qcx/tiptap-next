@@ -125,25 +125,7 @@ export const GROUPS: Group[] = [
         action: editor => {
           editor.chain().focus().setHorizontalRule().run();
         },
-      },
-      {
-        name: 'question',
-        label: 'Question',
-        iconName: 'Book',
-        description: 'Insert a question block',
-        action: editor => {
-          editor.chain().focus().insertQuestionBlock().run();
-        },
-      },
-      {
-        name: 'video',
-        label: 'Video',
-        iconName: 'Book',
-        description: 'Insert a video block',
-        action: editor => {
-          editor.chain().focus().insertVideoLessonBlock().run();
-        },
-      },
+      }
     ],
   },
   {
