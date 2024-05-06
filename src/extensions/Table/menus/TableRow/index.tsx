@@ -52,16 +52,16 @@ export const TableRowMenu = React.memo(({ editor, appendTo }: MenuProps): JSX.El
         <PopoverMenu.Item
           iconComponent={<Icon name="ArrowUpToLine" />}
           close={false}
-          label="Add row before"
+          label="Adicionar linha antes"
           onClick={onAddRowBefore}
         />
         <PopoverMenu.Item
           iconComponent={<Icon name="ArrowDownToLine" />}
           close={false}
-          label="Add row after"
+          label="Adicionar linha depois"
           onClick={onAddRowAfter}
         />
-        <PopoverMenu.Item icon="Trash" close={false} label="Delete row" onClick={onDeleteRow} />
+        <PopoverMenu.Item icon="Trash" close={false} label="Remover linha" onClick={onDeleteRow} />
       </Toolbar.Wrapper>
     </BaseBubbleMenu>
   )

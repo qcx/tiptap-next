@@ -52,19 +52,19 @@ export const ContentItemMenu = ({ editor }: ContentItemMenuProps) => {
               <Popover.Close>
                 <DropdownButton onClick={actions.resetTextFormatting}>
                   <Icon name="RemoveFormatting" />
-                  Clear formatting
+                  Limpar formatação
                 </DropdownButton>
               </Popover.Close>
               <Popover.Close>
                 <DropdownButton onClick={actions.copyNodeToClipboard}>
                   <Icon name="Clipboard" />
-                  Copy to clipboard
+                  Copiar
                 </DropdownButton>
               </Popover.Close>
               <Popover.Close>
                 <DropdownButton onClick={actions.duplicateNode}>
                   <Icon name="Copy" />
-                  Duplicate
+                  Duplicar
                 </DropdownButton>
               </Popover.Close>
               <Toolbar.Divider horizontal />
@@ -74,7 +74,7 @@ export const ContentItemMenu = ({ editor }: ContentItemMenuProps) => {
                   className="text-red-500 bg-red-500 dark:text-red-500 hover:bg-red-500 dark:hover:text-red-500 dark:hover:bg-red-500 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-20"
                 >
                   <Icon name="Trash2" />
-                  Delete
+                  Remover
                 </DropdownButton>
               </Popover.Close>
             </Surface>

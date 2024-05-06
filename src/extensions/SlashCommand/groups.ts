@@ -3,11 +3,11 @@ import { Group } from './types'
 export const GROUPS: Group[] = [
   {
     name: 'format',
-    title: 'Format',
+    title: 'Formatação',
     commands: [
       {
         name: 'heading1',
-        label: 'Heading 1',
+        label: 'Título 1',
         iconName: 'Heading1',
         description: 'High priority section title',
         aliases: ['h1'],
@@ -17,7 +17,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'heading2',
-        label: 'Heading 2',
+        label: 'Título 2',
         iconName: 'Heading2',
         description: 'Medium priority section title',
         aliases: ['h2'],
@@ -27,7 +27,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'heading3',
-        label: 'Heading 3',
+        label: 'Título 3',
         iconName: 'Heading3',
         description: 'Low priority section title',
         aliases: ['h3'],
@@ -37,7 +37,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'bulletList',
-        label: 'Bullet List',
+        label: 'Lista não ordenada',
         iconName: 'List',
         description: 'Unordered list of items',
         aliases: ['ul'],
@@ -47,7 +47,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'numberedList',
-        label: 'Numbered List',
+        label: 'Lista ordenada',
         iconName: 'ListOrdered',
         description: 'Ordered list of items',
         aliases: ['ol'],
@@ -57,7 +57,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'blockquote',
-        label: 'Blockquote',
+        label: 'Citação',
         iconName: 'Quote',
         description: 'Element for quoting',
         action: editor => {
@@ -66,7 +66,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'codeBlock',
-        label: 'Code Block',
+        label: 'Bloco de código',
         iconName: 'SquareCode',
         description: 'Code block with syntax highlighting',
         shouldBeHidden: editor => editor.isActive('columns'),
@@ -78,11 +78,11 @@ export const GROUPS: Group[] = [
   },
   {
     name: 'insert',
-    title: 'Insert',
+    title: 'Inserir',
     commands: [
       {
         name: 'table',
-        label: 'Table',
+        label: 'Tabela',
         iconName: 'Table',
         description: 'Insert a table',
         shouldBeHidden: editor => editor.isActive('columns'),
@@ -92,7 +92,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'image',
-        label: 'Image',
+        label: 'Imagem',
         iconName: 'Image',
         description: 'Insert an image',
         aliases: ['img'],
@@ -102,7 +102,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'columns',
-        label: 'Columns',
+        label: 'Divisão de colunas',
         iconName: 'Columns',
         description: 'Add two column content',
         aliases: ['cols'],
@@ -118,7 +118,7 @@ export const GROUPS: Group[] = [
       },
       {
         name: 'horizontalRule',
-        label: 'Horizontal Rule',
+        label: 'Linha horizontal',
         iconName: 'Minus',
         description: 'Insert a horizontal divider',
         aliases: ['hr'],
@@ -138,6 +138,30 @@ export const GROUPS: Group[] = [
       {
         name: 'video',
         label: 'Video',
+        iconName: 'Book',
+        description: 'Insert a video block',
+        action: editor => {
+          editor.chain().focus().insertVideoLessonBlock().run()
+        },
+      },
+    ],
+  },
+  {
+    name: 'qconcursos',
+    title: 'Qconcursos',
+    commands: [
+      {
+        name: 'question',
+        label: 'Inserir questão',
+        iconName: 'Book',
+        description: 'Insert a question block',
+        action: editor => {
+          editor.chain().focus().insertQuestionBlock().run()
+        },
+      },
+      {
+        name: 'video',
+        label: 'Inserir vídeo',
         iconName: 'Book',
         description: 'Insert a video block',
         action: editor => {

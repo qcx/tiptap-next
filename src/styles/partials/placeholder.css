@@ -7,26 +7,26 @@
   &.ProseMirror-focused {
     /* Slashmenu Placeholder */
     > p.has-focus.is-empty::before {
-      content: 'Type  /  to browse options';
+      content: 'Aperte  /  (barra) para mostrar opções de formatação';
     }
 
     > [data-type='columns'] > [data-type='column'] > p.is-empty.has-focus::before {
-      content: 'Type  /  to browse options';
+      content: 'Aperte  /  (barra) para mostrar opções de formatação';
     }
   }
 
   /* Default Placeholder */
   & > .is-editor-empty::before {
-    content: 'Click here to start writing …';
+    content: 'Clique e comece a escrever :)';
   }
 
   /* Blockquote Placeholder */
   blockquote .is-empty:not(.is-editor-empty):first-child:last-child::before {
-    content: 'Enter a quote';
+    content: 'Digite a citação';
   }
 
   blockquote + figcaption.is-empty:not(.is-editor-empty)::before {
-    content: 'Author';
+    content: 'Autor';
   }
 
   [data-placeholder][data-suggestion]::before,
