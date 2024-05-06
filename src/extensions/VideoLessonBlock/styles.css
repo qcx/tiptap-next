@@ -1,4 +1,4 @@
-.question-block-component {
+.video-block-component {
   border: 1px solid #0d0d0d;
   min-height: 350px;
   border-radius: 0.5rem;
@@ -31,7 +31,7 @@
   }
 }
 
-.question-block-component::after {
+.video-block-component::after {
   content: "";
   position: absolute;
   top: 0;
@@ -39,7 +39,7 @@
   right: 0;
   bottom: 0;
   background-size: cover;
-  background-image: url('/question.png'); 
+  background-image: url('/video.png'); 
   filter: blur(1.5px);
   z-index: -1; 
 }

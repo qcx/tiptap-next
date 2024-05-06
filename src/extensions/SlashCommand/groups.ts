@@ -135,6 +135,15 @@ export const GROUPS: Group[] = [
           editor.chain().focus().insertQuestionBlock().run()
         },
       },
+      {
+        name: 'video',
+        label: 'Video',
+        iconName: 'Book',
+        description: 'Insert a video block',
+        action: editor => {
+          editor.chain().focus().insertVideoLessonBlock().run()
+        },
+      },
     ],
   },
 ]

@@ -38,6 +38,7 @@ import {
   Columns,
   Column,
   QuestionBlock,
+  VideoLessonBlock,
 } from '.'
 import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight'
 import { ImageUpload } from './ImageUpload'
@@ -47,6 +48,7 @@ export const ExtensionKit = () => [
   Document,
   Columns,
   QuestionBlock,
+  VideoLessonBlock,
   Column,
   Selection,
   Heading.configure({

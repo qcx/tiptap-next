@@ -15,10 +15,10 @@ export const useBlockEditor = () => {
       autofocus: true,
       onCreate: ({ editor }) => {
         if (editor.isEmpty) {
-          // editor.commands.setContent(initialContent)
-          editor.commands.setContent(`<react-component>
-          <p>This is editable. You can create a new component by pressing Mod+Enter.</p>
-        </react-component>`)
+          //   // editor.commands.setContent(initialContent)
+          //   editor.commands.setContent(`<react-component>
+          //   <p>This is editable. You can create a new component by pressing Mod+Enter.</p>
+          // </react-component>`)
         }
       },
       extensions: [...ExtensionKit()],

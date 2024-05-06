@@ -12,8 +12,6 @@ export const MessageHandler = ({ editor }: { editor: Editor }) => {
 
         if (action === 'askContent') {
           window.parent.postMessage(editor.getJSON(), '*')
-          console.log(editor.getJSON())
-          alert('Bye')
         }
 
         if (action === 'setValue') {
